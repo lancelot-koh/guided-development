@@ -1,0 +1,128 @@
+{
+    "ActionBar": {
+        "Items": [{
+            "OnPress": "/bookshop-mdk/Actions/CloseModalPage_Cancel.action",
+            "Position": "left",
+            "SystemItem": "Cancel"
+        }, {
+            "OnPress": "/bookshop-mdk/Actions/Entities/Entities_CreateEntity.action",
+            "Position": "right",
+            "SystemItem": "Save"
+        }]
+    },
+    "Caption": "Create Entities",
+    "Controls": [{
+        "Sections": [{
+            "Controls": [{
+                    "Caption": "id",
+                    "_Name": "id",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "requiredEnum",
+                    "_Name": "requiredEnum",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "requiredComplex_street",
+                    "_Name": "requiredComplex_street",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "requiredComplex_city",
+                    "_Name": "requiredComplex_city",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "requiredComplex_state",
+                    "_Name": "requiredComplex_state",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "_Name": "requiredBoolean",
+                    "Caption": "requiredBoolean",
+                    "Value": false,
+                    "_Type": "Control.Type.FormCell.Switch"
+                },
+                {
+                    "Caption": "requiredByte",
+                    "_Name": "requiredByte",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Mode": "Date",
+                    "_Name": "requiredDate",
+                    "Caption": "requiredDate",
+                    "_Type": "Control.Type.FormCell.DatePicker"
+                },
+                {
+                    "Mode": "DateTime",
+                    "_Name": "requiredDateTimeOffset",
+                    "Caption": "requiredDateTimeOffset",
+                    "_Type": "Control.Type.FormCell.DatePicker"
+                },
+                {
+                    "Caption": "requiredDecimal",
+                    "_Name": "requiredDecimal",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "requiredDouble",
+                    "_Name": "requiredDouble",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "requiredGuid",
+                    "_Name": "requiredGuid",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "requiredInteger",
+                    "_Name": "requiredInteger",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "requiredInt16",
+                    "_Name": "requiredInt16",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "requiredInt32",
+                    "_Name": "requiredInt32",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "requiredInt64",
+                    "_Name": "requiredInt64",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "requiredSByte",
+                    "_Name": "requiredSByte",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "requiredSingle",
+                    "_Name": "requiredSingle",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "requiredString",
+                    "_Name": "requiredString",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "requiredTimeOfDay",
+                    "_Name": "requiredTimeOfDay",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                }
+            ],
+    	    "_Name": "SectionFormCell1",
+            "_Type": "Section.Type.FormCell"
+		}],
+        "_Name": "SectionedTable",
+        "_Type": "Control.Type.SectionedTable"
+	}],
+    "_Type": "Page",
+    "_Name": "Entities_Create"
+}

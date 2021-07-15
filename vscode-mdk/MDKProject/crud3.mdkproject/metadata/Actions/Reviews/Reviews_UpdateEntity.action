@@ -1,0 +1,25 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "Reviews",
+        "Service": "/bookshop-mdk/Services/service1.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "ID": "#Control:ID/#Value",
+        "createdAt": "#Control:createdAt/#Value",
+        "createdBy": "#Control:createdBy/#Value",
+        "modifiedAt": "#Control:modifiedAt/#Value",
+        "modifiedBy": "#Control:modifiedBy/#Value",
+        "book_ID": "#Control:book_ID/#Value",
+        "rating": "#Control:rating/#Value",
+        "title": "#Control:title/#Value",
+        "text": "#Control:text/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "OnSuccess": "/bookshop-mdk/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/bookshop-mdk/Actions/UpdateEntityFailureMessage.action"
+}

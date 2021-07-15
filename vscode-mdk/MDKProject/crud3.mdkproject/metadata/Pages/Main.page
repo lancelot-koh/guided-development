@@ -1,0 +1,52 @@
+{
+    "Caption": "Main",
+    "Controls": [{
+        "_Name": "SectionedTable0",
+        "_Type": "Control.Type.SectionedTable",
+        "Sections": [{
+            "Buttons": [{
+                    "OnPress": "/bookshop-mdk/Actions/Authors/NavToAuthors_List.action",
+                    "TextAlignment": "center",
+                    "Title": "Authors"
+                },
+                {
+                    "OnPress": "/bookshop-mdk/Actions/BookImages/NavToBookImages_List.action",
+                    "TextAlignment": "center",
+                    "Title": "BookImages"
+                },
+                {
+                    "OnPress": "/bookshop-mdk/Actions/Books/NavToBooks_List.action",
+                    "TextAlignment": "center",
+                    "Title": "Books"
+                },
+                {
+                    "OnPress": "/bookshop-mdk/Actions/Entities/NavToEntities_List.action",
+                    "TextAlignment": "center",
+                    "Title": "Entities"
+                },
+                {
+                    "OnPress": "/bookshop-mdk/Actions/Orders/NavToOrders_List.action",
+                    "TextAlignment": "center",
+                    "Title": "Orders"
+                },
+                {
+                    "OnPress": "/bookshop-mdk/Actions/Reviews/NavToReviews_List.action",
+                    "TextAlignment": "center",
+                    "Title": "Reviews"
+                }
+            ],
+            "_Name": "SectionButtonTable0",
+            "_Type": "Section.Type.ButtonTable"
+        }]
+    }],
+    "_Name": "Main",
+    "_Type": "Page",
+    "ToolBar": {
+        "Controls": [{
+            "_Name": "LogoutToolbarItem",
+            "_Type": "Control.Type.ToolbarItem",
+            "Caption": "Logout",
+            "OnPress": "/bookshop-mdk/Actions/Logout.action"
+        }]
+    }
+}

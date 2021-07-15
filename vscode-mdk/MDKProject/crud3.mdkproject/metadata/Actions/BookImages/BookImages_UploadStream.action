@@ -1,0 +1,17 @@
+{
+  "_Type": "Action.Type.ODataService.UploadStream",
+  "Target" : {
+    "Service": "/bookshop-mdk/Services/service1.service",
+    "EntitySet" : "BookImages",
+    "ReadLink": "{@odata.readLink}"
+  },
+  "Properties" : {
+    "image": "#Control:Attachment/#Value"
+  },
+  "ShowActivityIndicator" : true,
+  "ActionResult" : { 
+    "_Name" : "uploadstream"
+  },
+  "OnSuccess": "/bookshop-mdk/Actions/UploadStreamSuccessMessage.action",
+  "OnFailure": "/bookshop-mdk/Actions/UploadStreamFailureMessage.action"
+}

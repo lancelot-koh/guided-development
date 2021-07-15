@@ -1,0 +1,7 @@
+{
+ 	"Service": "/bookshop-mdk/Services/service1.service",
+ "_Type": "Action.Type.OfflineOData.Download",
+  "ShowActivityIndicator" : true,
+  "OnSuccess": "/bookshop-mdk/Actions/Service/DownloadSuccessMessage.action",
+  "OnFailure": "/bookshop-mdk/Actions/Service/DownloadFailureMessage.action"
+}

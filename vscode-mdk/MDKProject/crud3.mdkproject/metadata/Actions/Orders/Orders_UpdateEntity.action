@@ -1,0 +1,25 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "Orders",
+        "Service": "/bookshop-mdk/Services/service1.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "createdAt": "#Control:createdAt/#Value",
+        "createdBy": "#Control:createdBy/#Value",
+        "modifiedAt": "#Control:modifiedAt/#Value",
+        "modifiedBy": "#Control:modifiedBy/#Value",
+        "ID": "#Control:ID/#Value",
+        "book_ID": "#Control:book_ID/#Value",
+        "country_code": "#Control:country_code/#Value",
+        "amount": "#Control:amount/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "ShowActivityIndicator" : true,
+    "OnSuccess": "/bookshop-mdk/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/bookshop-mdk/Actions/UpdateEntityFailureMessage.action"
+}

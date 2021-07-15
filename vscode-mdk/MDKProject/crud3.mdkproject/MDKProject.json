@@ -1,0 +1,7 @@
+{
+  "AppName": "MDK CRUD3",
+  "AppVersion": "1.0.0",
+  "BundleID": "com.sap.mobile.platform.MDKCRUD3",
+  "Externals": [],
+  "UrlScheme": "mdkclient"
+}

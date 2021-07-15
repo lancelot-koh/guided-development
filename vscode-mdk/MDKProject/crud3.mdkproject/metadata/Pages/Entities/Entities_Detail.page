@@ -1,0 +1,125 @@
+{
+    "Caption": "Entities",
+
+    "ActionBar": {
+        "Items": [{
+            "OnPress": "/bookshop-mdk/Actions/Entities/NavToEntities_Edit.action",
+            "Position": "right",
+            "SystemItem": "Edit"
+        }, {
+            "OnPress": "/bookshop-mdk/Rules/Entities/Entities_DeleteConfirmation.js",
+            "Position": "right",
+            "SystemItem": "Trash"
+        }]
+    },
+    "Controls": [{
+        "Sections": [{
+            "ObjectHeader": {
+                "DetailImage": "",
+                "HeadlineText": "{id}",
+                "Subhead": "{requiredEnum}",
+                "Tags": [],
+                "BodyText": "",
+                "Footnote": "{requiredComplex_city}",
+                "Description": "{requiredComplex_street}",
+                "StatusText": "{requiredComplex_state}",
+                "StatusImage": "",
+                "SubstatusImage": "",
+                "SubstatusText": "{requiredBoolean}"
+            },
+            "_Type": "Section.Type.ObjectHeader"
+        }, {
+            "KeyAndValues": [{
+                    "KeyName": "id",
+                    "Value": "{id}"
+                },
+                {
+                    "KeyName": "requiredEnum",
+                    "Value": "{requiredEnum}"
+                },
+                {
+                    "KeyName": "requiredComplex_street",
+                    "Value": "{requiredComplex_street}"
+                },
+                {
+                    "KeyName": "requiredComplex_city",
+                    "Value": "{requiredComplex_city}"
+                },
+                {
+                    "KeyName": "requiredComplex_state",
+                    "Value": "{requiredComplex_state}"
+                },
+                {
+                    "KeyName": "requiredBoolean",
+                    "Value": "{requiredBoolean}"
+                },
+                {
+                    "KeyName": "requiredByte",
+                    "Value": "{requiredByte}"
+                },
+                {
+                    "KeyName": "requiredDate",
+                    "Value": "{requiredDate}"
+                },
+                {
+                    "KeyName": "requiredDateTimeOffset",
+                    "Value": "{requiredDateTimeOffset}"
+                },
+                {
+                    "KeyName": "requiredDecimal",
+                    "Value": "{requiredDecimal}"
+                },
+                {
+                    "KeyName": "requiredDouble",
+                    "Value": "{requiredDouble}"
+                },
+                {
+                    "KeyName": "requiredGuid",
+                    "Value": "{requiredGuid}"
+                },
+                {
+                    "KeyName": "requiredInteger",
+                    "Value": "{requiredInteger}"
+                },
+                {
+                    "KeyName": "requiredInt16",
+                    "Value": "{requiredInt16}"
+                },
+                {
+                    "KeyName": "requiredInt32",
+                    "Value": "{requiredInt32}"
+                },
+                {
+                    "KeyName": "requiredInt64",
+                    "Value": "{requiredInt64}"
+                },
+                {
+                    "KeyName": "requiredSByte",
+                    "Value": "{requiredSByte}"
+                },
+                {
+                    "KeyName": "requiredSingle",
+                    "Value": "{requiredSingle}"
+                },
+                {
+                    "KeyName": "requiredString",
+                    "Value": "{requiredString}"
+                },
+                {
+                    "KeyName": "requiredTimeOfDay",
+                    "Value": "{requiredTimeOfDay}"
+                }
+            ],
+            "Layout": {
+                "NumberOfColumns": 2
+            },
+            "MaxItemCount": 1,
+            "_Name": "SectionKeyValue0",
+            "_Type": "Section.Type.KeyValue"
+        }],
+        "_Type": "Control.Type.SectionedTable",
+        "_Name": "SectionedTable"
+    }],
+    "_Type": "Page",
+    "_Name": "Entities_Detail"
+}

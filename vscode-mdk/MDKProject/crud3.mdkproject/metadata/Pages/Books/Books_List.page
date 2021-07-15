@@ -1,0 +1,36 @@
+{
+    "Caption": "Books",
+    "ActionBar": {
+        "Items": [
+            {
+                "OnPress": "/bookshop-mdk/Actions/Books/NavToBooks_Create.action",
+                "Position": "right",
+                "SystemItem": "Add"
+            }
+        ]
+    },
+    "Controls": [
+        {
+            "Sections": [
+                {
+                    "DataObject": "/bookshop-mdk/DataObjects/Books/Books_List.dataobject",
+                    "_Name": "Books_List",
+                    "_Type": "Section.Type.DataObject"
+                },
+                {
+                    "DataObject": "/DataObjects/Entities/Entities_List.dataobject",
+                    "_Name": "EntittiesDO2",
+                    "_Type": "Section.Type.DataObject"
+                }
+            ],
+            "LoadingIndicator": {
+                "Enabled": true,
+                "Text": "Loading, please wait..."
+            },
+            "_Type": "Control.Type.SectionedTable",
+            "_Name": "SectionedTable"
+        }
+    ],
+    "_Type": "Page",
+    "_Name": "Books_List"
+}

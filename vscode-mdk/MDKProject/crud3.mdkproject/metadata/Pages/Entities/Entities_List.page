@@ -1,0 +1,25 @@
+{
+    "Caption": "Entities",
+    "ActionBar": {
+        "Items": [{
+            "OnPress": "/bookshop-mdk/Actions/Entities/NavToEntities_Create.action",
+            "Position": "right",
+            "SystemItem": "Add"
+        }]
+    },
+    "Controls": [{
+        "Sections": [{
+			"DataObject": "/bookshop-mdk/DataObjects/Entities/Entities_List.dataobject",
+			"_Name": "Entities_List",
+			"_Type": "Section.Type.DataObject"
+		}],
+        "LoadingIndicator": {
+            "Enabled": true,
+            "Text": "Loading, please wait..."
+        },
+        "_Type": "Control.Type.SectionedTable",
+        "_Name": "SectionedTable"
+    }],
+    "_Type": "Page",
+    "_Name": "Entities_List"
+}

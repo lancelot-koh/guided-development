@@ -1,0 +1,6 @@
+{
+    "ModalPageFullscreen": false,
+    "ModalPage": true,
+    "PageToOpen": "/bookshop-mdk/Pages/Authors/Authors_Create.page",
+    "_Type": "Action.Type.Navigation"
+}

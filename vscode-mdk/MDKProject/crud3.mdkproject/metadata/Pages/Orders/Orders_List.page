@@ -1,0 +1,41 @@
+{
+    "Caption": "Orders",
+    "ActionBar": {
+        "Items": [
+            {
+                "OnPress": "/bookshop-mdk/Actions/Orders/NavToOrders_Create.action",
+                "Position": "right",
+                "SystemItem": "Add"
+            }
+        ]
+    },
+    "Controls": [
+        {
+            "Sections": [
+                {
+                    "DataObject": "/bookshop-mdk/DataObjects/Orders/Orders_List.dataobject",
+                    "_Name": "Orders_List",
+                    "_Type": "Section.Type.DataObject"
+                },
+                {
+                    "DataObject": "/DataObjects/Reviews/Reviews_list.dataobject",
+                    "_Name": "ReviewListDO",
+                    "_Type": "Section.Type.DataObject"
+                },
+                {
+                    "DataObject": "/DataObjects/Books/Books_List.dataobject",
+                    "_Name": "BookDO2",
+                    "_Type": "Section.Type.DataObject"
+                }
+            ],
+            "LoadingIndicator": {
+                "Enabled": true,
+                "Text": "Loading, please wait..."
+            },
+            "_Type": "Control.Type.SectionedTable",
+            "_Name": "SectionedTable"
+        }
+    ],
+    "_Type": "Page",
+    "_Name": "Orders_List"
+}

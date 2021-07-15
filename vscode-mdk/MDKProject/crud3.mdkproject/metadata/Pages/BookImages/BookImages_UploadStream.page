@@ -1,0 +1,40 @@
+{
+  "Caption": "Upload Stream",
+  "ActionBar": {
+		"Items": [{
+			"OnPress": "/bookshop-mdk/Actions/CloseModalPage_Cancel.action",
+			"Position": "left",
+			"SystemItem": "Cancel"
+		}, {
+			"OnPress": "/bookshop-mdk/Actions/BookImages/BookImages_UploadStream.action",
+			"Position": "right",
+			"Text": "UploadStream"
+		}]
+  },  
+  "Controls": [
+    {
+      "Sections": [
+        {
+          "Controls": [
+            {
+              "_Name": "Attachment",
+              "_Type": "Control.Type.FormCell.Attachment",
+              "AttachmentTitle": "Photos",
+              "AttachmentActionType": [
+                "AddPhoto",
+                "TakePhoto",
+                "SelectFile"
+              ],
+              "AllowedFileTypes": ["jpg", "png", "gif"],
+              "Value": []
+            }
+          ]
+        }
+      ],
+      "_Name": "UploadStreamContainer",
+      "_Type": "Control.Type.FormCellContainer"
+    }
+  ],
+  "_Name": "BookImages_UploadStream",
+  "_Type": "Page"
+}

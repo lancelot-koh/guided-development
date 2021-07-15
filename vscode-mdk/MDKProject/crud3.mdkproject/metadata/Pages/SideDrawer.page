@@ -1,0 +1,64 @@
+{
+  "_Type": "Page",
+  "_Name": "Bookshop",
+  "Controls":[
+    {
+      "_Type":"Control.Type.SideDrawer",
+      "Header": {
+        "Icon": "sap-icon://table-view",
+        "IconIsCircular":true,
+        "Headline": "Bookshop",
+        "SubHeadline": ""
+      },
+      "ClearHistory": false,
+      "Sections": [
+        {
+          "Caption" : "",
+          "Items" : [
+            {
+              "Title" : "Authors",
+              "PageToOpen" : "/bookshop-mdk/Pages/Authors/Authors_List.page",
+              "_Name": "Authors"
+            },
+            {
+              "Title" : "BookImages",
+              "PageToOpen" : "/bookshop-mdk/Pages/BookImages/BookImages_List.page",
+              "_Name": "BookImages"
+            },
+            {
+              "Title" : "Books",
+              "PageToOpen" : "/bookshop-mdk/Pages/Books/Books_List.page",
+              "_Name": "Books"
+            },
+            {
+              "Title" : "Entities",
+              "PageToOpen" : "/bookshop-mdk/Pages/Entities/Entities_List.page",
+              "_Name": "Entities"
+            },
+            {
+              "Title" : "Orders",
+              "PageToOpen" : "/bookshop-mdk/Pages/Orders/Orders_List.page",
+              "_Name": "Orders"
+            },
+            {
+              "Title" : "Reviews",
+              "PageToOpen" : "/bookshop-mdk/Pages/Reviews/Reviews_List.page",
+              "_Name": "Reviews"
+            }
+          ]
+        },
+        {
+          "Caption" : "",
+          "Items" : [
+            {
+              "Title" : "Sync",
+              "OnPress" : "/bookshop-mdk/Actions/Service/Upload.action",
+              "_Name": "Sync"
+            }
+          ]
+        }
+      ],
+      "DataSubscriptions": []
+    }
+  ]
+}

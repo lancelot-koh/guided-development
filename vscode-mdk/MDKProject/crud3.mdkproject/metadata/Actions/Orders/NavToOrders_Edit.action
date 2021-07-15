@@ -1,0 +1,6 @@
+{
+    "ModalPageFullscreen": false,
+    "ModalPage": true,
+    "PageToOpen": "/bookshop-mdk/Pages/Orders/Orders_Edit.page",
+    "_Type": "Action.Type.Navigation"
+}

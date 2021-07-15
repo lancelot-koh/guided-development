@@ -1,0 +1,37 @@
+{
+    "Header": {
+        "UseTopPadding": false
+    },
+    "ObjectCell": {
+        "AccessoryType": "disclosureIndicator",
+        "Description": "",
+        "DetailImage": "",
+        "DetailImageIsCircular": false,
+        "Icons": [],
+        "OnPress": "/bookshop-mdk/Actions/Entities/NavToEntities_Detail.action",
+        "StatusImage": "",
+        "Title": "{id}",
+        "Footnote": "",
+        "PreserveIconStackSpacing": false,
+        "StatusText": "",
+        "Subhead": "{requiredString}",
+        "SubstatusText": ""
+    },
+    "Search": {
+        "Enabled": false,
+        "Placeholder": "Item Search",
+        "BarcodeScanner": true,
+        "Delay": 500,
+        "MinimumCharacterThreshold": 3
+    },
+    "DataPaging": {
+        "ShowLoadingIndicator": true,
+        "LoadingIndicatorText": "Loading more items, please wait..."
+    },
+    "Target": {
+        "EntitySet": "Entities",
+        "Service": "/bookshop-mdk/Services/service1.service",
+        "QueryOptions": ""
+    },
+    "_Type": "Section.Type.ObjectTable"
+}

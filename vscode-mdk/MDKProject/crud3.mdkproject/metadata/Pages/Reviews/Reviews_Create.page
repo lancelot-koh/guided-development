@@ -1,0 +1,72 @@
+{
+    "ActionBar": {
+        "Items": [{
+            "OnPress": "/bookshop-mdk/Actions/CloseModalPage_Cancel.action",
+            "Position": "left",
+            "SystemItem": "Cancel"
+        }, {
+            "OnPress": "/bookshop-mdk/Actions/Reviews/Reviews_CreateEntity.action",
+            "Position": "right",
+            "SystemItem": "Save"
+        }]
+    },
+    "Caption": "Create Reviews",
+    "Controls": [{
+        "Sections": [{
+            "Controls": [{
+                    "Caption": "ID",
+                    "_Name": "ID",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Mode": "DateTime",
+                    "_Name": "createdAt",
+                    "Caption": "$(L,'CreatedAt')",
+                    "_Type": "Control.Type.FormCell.DatePicker"
+                },
+                {
+                    "Caption": "$(L,'CreatedBy')",
+                    "_Name": "createdBy",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Mode": "DateTime",
+                    "_Name": "modifiedAt",
+                    "Caption": "$(L,'ChangedAt')",
+                    "_Type": "Control.Type.FormCell.DatePicker"
+                },
+                {
+                    "Caption": "$(L,'ChangedBy')",
+                    "_Name": "modifiedBy",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "book_ID",
+                    "_Name": "book_ID",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "rating",
+                    "_Name": "rating",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "title",
+                    "_Name": "title",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "text",
+                    "_Name": "text",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                }
+            ],
+            "_Name": "SectionFormCell1",
+            "_Type": "Section.Type.FormCell"
+		}],
+        "_Name": "SectionedTable",
+        "_Type": "Control.Type.SectionedTable"
+	}],
+    "_Type": "Page",
+    "_Name": "Reviews_Create"
+}

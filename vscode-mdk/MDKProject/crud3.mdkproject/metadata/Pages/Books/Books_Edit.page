@@ -1,0 +1,50 @@
+{
+    "Caption": "Update Books",
+    "ActionBar": {
+        "Items": [{
+            "Position": "left",
+            "SystemItem": "Cancel",
+            "OnPress": "/bookshop-mdk/Actions/CloseModalPage_Cancel.action"
+        }, {
+            "Position": "right",
+            "SystemItem": "Save",
+            "OnPress": "/bookshop-mdk/Actions/Books/Books_UpdateEntity.action"
+        }]
+    },
+    "Controls": [{
+        "Sections": [{
+            "Caption": "",
+            "Controls": [{
+                    "Caption": "ID",
+                    "_Name": "ID",
+                    "Value": "{ID}",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "title",
+                    "_Name": "title",
+                    "Value": "{title}",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "author_ID",
+                    "_Name": "author_ID",
+                    "Value": "{author_ID}",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "stock",
+                    "_Name": "stock",
+                    "Value": "{stock}",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                }
+            ],
+    	    "_Name": "SectionFormCell1",
+            "_Type": "Section.Type.FormCell"
+		}],
+        "_Name": "SectionedTable",
+        "_Type": "Control.Type.SectionedTable"
+	}],
+    "_Type": "Page",
+    "_Name": "Books_Edit"
+}

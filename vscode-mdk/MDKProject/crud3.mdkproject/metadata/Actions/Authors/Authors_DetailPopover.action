@@ -1,0 +1,10 @@
+{
+  "PopoverItems": [{
+    "Title": "Create Book",
+    "OnPress": "/bookshop-mdk/Actions/Authors/NavToAuthors_CreateBook.action"
+  }, {
+    "Title": "Delete",
+    "OnPress": "/bookshop-mdk/Rules/Authors/Authors_DeleteConfirmation.js"
+  }],
+  "_Type": "Action.Type.PopoverMenu"
+}

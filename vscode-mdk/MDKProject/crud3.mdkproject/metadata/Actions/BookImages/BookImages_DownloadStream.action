@@ -1,0 +1,17 @@
+{
+  "_Type": "Action.Type.ODataService.DownloadStream",
+  "Target": {
+    "Service": "/bookshop-mdk/Services/service1.service",
+    "EntitySet": "BookImages",
+    "ReadLink": "{@odata.readLink}"
+  },
+  "Properties": [
+    "image"
+  ],
+  "ShowActivityIndicator" : true,
+  "ActionResult" : {
+    "_Name" : "downloadstream"
+  },
+  "OnSuccess": "/bookshop-mdk/Actions/DownloadStreamSuccessMessage.action",
+  "OnFailure": "/bookshop-mdk/Actions/DownloadStreamFailureMessage.action"
+}

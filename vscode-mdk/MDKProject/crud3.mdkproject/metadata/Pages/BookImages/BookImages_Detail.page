@@ -1,0 +1,57 @@
+{
+    "Caption": "BookImages",
+
+    "ActionBar": {
+        "Items": [{
+            "OnPress": "/bookshop-mdk/Actions/BookImages/NavToBookImages_Edit.action",
+            "Position": "right",
+            "SystemItem": "Edit"
+        }, {
+			"OnPress": "/bookshop-mdk/Actions/BookImages/BookImages_DetailPopover.action",
+			"Position": "right",
+			"Text": "More"
+		}]
+    },
+    "Controls": [{
+        "Sections": [{
+            "ObjectHeader": {
+                "DetailImage": "",
+                "HeadlineText": "{name}",
+                "Subhead": "{ID}",
+                "Tags": [],
+                "BodyText": "",
+                "Footnote": "",
+                "Description": "{imageType}",
+                "StatusText": "",
+                "StatusImage": "",
+                "SubstatusImage": "",
+                "SubstatusText": ""
+            },
+            "_Type": "Section.Type.ObjectHeader"
+        }, {
+            "KeyAndValues": [{
+                    "KeyName": "ID",
+                    "Value": "{ID}"
+                },
+                {
+                    "KeyName": "name",
+                    "Value": "{name}"
+                },
+                {
+                    "KeyName": "imageType",
+                    "Value": "{imageType}"
+                }
+            ],
+            "Layout": {
+                "NumberOfColumns": 2
+            },
+            "MaxItemCount": 1,
+            "_Name": "SectionKeyValue0",
+            "_Type": "Section.Type.KeyValue"
+        }],
+        "_Type": "Control.Type.SectionedTable",
+        "_Name": "SectionedTable"
+    }],
+    "_Type": "Page",
+    "_Name": "BookImages_Detail"
+}

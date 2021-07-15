@@ -1,0 +1,81 @@
+{
+    "Caption": "Reviews",
+
+    "ActionBar": {
+        "Items": [{
+            "OnPress": "/bookshop-mdk/Actions/Reviews/NavToReviews_Edit.action",
+            "Position": "right",
+            "SystemItem": "Edit"
+        }, {
+            "OnPress": "/bookshop-mdk/Rules/Reviews/Reviews_DeleteConfirmation.js",
+            "Position": "right",
+            "SystemItem": "Trash"
+        }]
+    },
+    "Controls": [{
+        "Sections": [{
+            "ObjectHeader": {
+                "DetailImage": "",
+                "HeadlineText": "{title}",
+                "Subhead": "{ID}",
+                "Tags": [],
+                "BodyText": "",
+                "Footnote": "{createdBy}",
+                "Description": "{createdAt}",
+                "StatusText": "{modifiedAt}",
+                "StatusImage": "",
+                "SubstatusImage": "",
+                "SubstatusText": "{modifiedBy}"
+            },
+            "_Type": "Section.Type.ObjectHeader"
+        }, {
+            "KeyAndValues": [{
+                    "KeyName": "ID",
+                    "Value": "{ID}"
+                },
+                {
+                    "KeyName": "$(L,'CreatedAt')",
+                    "Value": "{createdAt}"
+                },
+                {
+                    "KeyName": "$(L,'CreatedBy')",
+                    "Value": "{createdBy}"
+                },
+                {
+                    "KeyName": "$(L,'ChangedAt')",
+                    "Value": "{modifiedAt}"
+                },
+                {
+                    "KeyName": "$(L,'ChangedBy')",
+                    "Value": "{modifiedBy}"
+                },
+                {
+                    "KeyName": "book_ID",
+                    "Value": "{book_ID}"
+                },
+                {
+                    "KeyName": "rating",
+                    "Value": "{rating}"
+                },
+                {
+                    "KeyName": "title",
+                    "Value": "{title}"
+                },
+                {
+                    "KeyName": "text",
+                    "Value": "{text}"
+                }
+            ],
+            "Layout": {
+                "NumberOfColumns": 2
+            },
+            "MaxItemCount": 1,
+            "_Name": "SectionKeyValue0",
+            "_Type": "Section.Type.KeyValue"
+        }],
+        "_Type": "Control.Type.SectionedTable",
+        "_Name": "SectionedTable"
+    }],
+    "_Type": "Page",
+    "_Name": "Reviews_Detail"
+}

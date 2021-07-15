@@ -1,0 +1,14 @@
+{
+    "Target": {
+        "EntitySet": "Books",
+        "Service": "/bookshop-mdk/Services/service1.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "OnSuccess": "/bookshop-mdk/Actions/DeleteEntitySuccessMessage.action",
+    "OnFailure": "/bookshop-mdk/Actions/DeleteEntityFailureMessage.action",
+    "ActionResult": {
+        "_Name": "delete"
+    },
+    "ShowActivityIndicator" : true,
+    "_Type": "Action.Type.ODataService.DeleteEntity"
+}

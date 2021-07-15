@@ -1,0 +1,38 @@
+{
+    "Caption": "Update Authors",
+    "ActionBar": {
+        "Items": [{
+            "Position": "left",
+            "SystemItem": "Cancel",
+            "OnPress": "/bookshop-mdk/Actions/CloseModalPage_Cancel.action"
+        }, {
+            "Position": "right",
+            "SystemItem": "Save",
+            "OnPress": "/bookshop-mdk/Actions/Authors/Authors_UpdateEntity.action"
+        }]
+    },
+    "Controls": [{
+        "Sections": [{
+            "Caption": "",
+            "Controls": [{
+                    "Caption": "ID",
+                    "_Name": "ID",
+                    "Value": "{ID}",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "name",
+                    "_Name": "name",
+                    "Value": "{name}",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                }
+			],
+    	    "_Name": "SectionFormCell1",
+            "_Type": "Section.Type.FormCell"
+		}],
+        "_Name": "SectionedTable",
+        "_Type": "Control.Type.SectionedTable"
+	}],
+    "_Type": "Page",
+    "_Name": "Authors_Edit"
+}

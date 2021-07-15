@@ -1,0 +1,33 @@
+{
+    "Header": {
+        "UseTopPadding": false
+    },
+    "ObjectCell": {
+        "AccessoryType": "disclosureIndicator",
+        "Description": "",
+        "DetailImage": "",
+        "DetailImageIsCircular": false,
+        "Icons": [],
+        "OnPress": "/bookshop-mdk/Actions/Reviews/NavToReviews_Detail.action",
+        "StatusImage": "",
+        "Title": "{ID}",
+        "Footnote": "",
+        "PreserveIconStackSpacing": false,
+        "StatusText": "",
+        "Subhead": "{title}",
+        "SubstatusText": ""
+    },
+    "Search": {
+        "Enabled": true,
+        "Placeholder": "Item Search",
+        "BarcodeScanner": true,
+        "Delay": 500,
+        "MinimumCharacterThreshold": 3
+    },
+    "Target": {
+        "EntitySet": "Reviews",
+        "Service": "/bookshop-mdk/Services/service1.service",
+        "QueryOptions": ""
+    },
+    "_Type": "Section.Type.ObjectTable"
+}

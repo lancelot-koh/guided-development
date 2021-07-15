@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+        <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
+        <edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="BookShopService" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <EntityContainer Name="EntityContainer">
+                <EntitySet Name="Authors" EntityType="BookShopService.Authors">
+                    <NavigationPropertyBinding Path="books" Target="Books"/>
+                </EntitySet>
+                <EntitySet Name="BookImages" EntityType="BookShopService.BookImages"/>
+                <EntitySet Name="Books" EntityType="BookShopService.Books">
+                    <NavigationPropertyBinding Path="author" Target="Authors"/>
+                    <NavigationPropertyBinding Path="texts" Target="Books_texts"/>
+                    <NavigationPropertyBinding Path="localized" Target="Books_texts"/>
+                </EntitySet>
+                <EntitySet Name="Countries" EntityType="BookShopService.Countries">
+                    <NavigationPropertyBinding Path="texts" Target="Countries_texts"/>
+                    <NavigationPropertyBinding Path="localized" Target="Countries_texts"/>
+                </EntitySet>
+                <EntitySet Name="Customers" EntityType="BookShopService.Customers"/>
+                <EntitySet Name="Entities" EntityType="BookShopService.Entities"/>
+                <EntitySet Name="Orders" EntityType="BookShopService.Orders">
+                    <NavigationPropertyBinding Path="book" Target="Books"/>
+                    <NavigationPropertyBinding Path="country" Target="Countries"/>
+                </EntitySet>
+                <EntitySet Name="Books_texts" EntityType="BookShopService.Books_texts"/>
+                <EntitySet Name="Countries_texts" EntityType="BookShopService.Countries_texts"/>
+                <FunctionImport Name="get_complex" Function="BookShopService.get_complex"/>
+                <FunctionImport Name="get_complex_collection" Function="BookShopService.get_complex_collection"/>
+                <FunctionImport Name="get_many_complex" Function="BookShopService.get_many_complex"/>
+                <FunctionImport Name="get_one_complex" Function="BookShopService.get_one_complex"/>
+                <FunctionImport Name="get_string" Function="BookShopService.get_string"/>
+                <FunctionImport Name="get_string_collection" Function="BookShopService.get_string_collection"/>
+                <FunctionImport Name="get_string_collection_2" Function="BookShopService.get_string_collection_2"/>
+                <ActionImport Name="post_complex" Action="BookShopService.post_complex"/>
+                <ActionImport Name="post_complex_collection" Action="BookShopService.post_complex_collection"/>
+                <ActionImport Name="post_string" Action="BookShopService.post_string"/>
+                <ActionImport Name="post_string_collection" Action="BookShopService.post_string_collection"/>
+            </EntityContainer>
+            <EntityType Name="Authors">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="name" Type="Edm.String"/>
+                <NavigationProperty Name="books" Type="Collection(BookShopService.Books)" Partner="author"/>
+            </EntityType>
+            <EntityType Name="BookImages">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="name" Type="Edm.String"/>
+                <Property Name="image" Type="Edm.Stream"/>
+                <Property Name="imageType" Type="Edm.String"/>
+            </EntityType>
+            <EntityType Name="Books">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="title" Type="Edm.String"/>
+                <NavigationProperty Name="author" Type="BookShopService.Authors" Partner="books">
+                    <ReferentialConstraint Property="author_ID" ReferencedProperty="ID"/>
+                </NavigationProperty>
+                <Property Name="author_ID" Type="Edm.Int32"/>
+                <Property Name="stock" Type="Edm.Int32"/>
+                <NavigationProperty Name="texts" Type="Collection(BookShopService.Books_texts)">
+                    <OnDelete Action="Cascade"/>
+                </NavigationProperty>
+                <NavigationProperty Name="localized" Type="BookShopService.Books_texts">
+                    <ReferentialConstraint Property="ID" ReferencedProperty="ID"/>
+                </NavigationProperty>
+            </EntityType>
+            <EntityType Name="Countries">
+                <Key>
+                    <PropertyRef Name="code"/>
+                </Key>
+                <Property Name="name" Type="Edm.String" MaxLength="255"/>
+                <Property Name="descr" Type="Edm.String" MaxLength="1000"/>
+                <Property Name="code" Type="Edm.String" MaxLength="3" Nullable="false"/>
+                <NavigationProperty Name="texts" Type="Collection(BookShopService.Countries_texts)">
+                    <OnDelete Action="Cascade"/>
+                </NavigationProperty>
+                <NavigationProperty Name="localized" Type="BookShopService.Countries_texts">
+                    <ReferentialConstraint Property="code" ReferencedProperty="code"/>
+                </NavigationProperty>
+            </EntityType>
+            <EntityType Name="Customers">
+                <Key>
+                    <PropertyRef Name="CustomerID"/>
+                </Key>
+                <Property Name="CustomerID" Type="Edm.String" MaxLength="5" Nullable="false"/>
+                <Property Name="CompanyName" Type="Edm.String" MaxLength="40"/>
+                <Property Name="ContactName" Type="Edm.String" MaxLength="30"/>
+                <Property Name="ContactTitle" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Address" Type="Edm.String" MaxLength="60"/>
+                <Property Name="City" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Region" Type="Edm.String" MaxLength="15"/>
+                <Property Name="PostalCode" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Country" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Phone" Type="Edm.String" MaxLength="24"/>
+                <Property Name="Fax" Type="Edm.String" MaxLength="24"/>
+            </EntityType>
+            <EntityType Name="Entities">
+                <Key>
+                    <PropertyRef Name="id"/>
+                </Key>
+                <Property Name="id" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="requiredEnum" Type="Edm.Int32"/>
+                <Property Name="requiredComplex_street" Type="Edm.String"/>
+                <Property Name="requiredComplex_city" Type="Edm.String"/>
+                <Property Name="requiredComplex_state" Type="Edm.String"/>
+                <Property Name="requiredBoolean" Type="Edm.Boolean"/>
+                <Property Name="requiredByte" Type="Edm.Int32"/>
+                <Property Name="requiredDate" Type="Edm.Date"/>
+                <Property Name="requiredDateTimeOffset" Type="Edm.DateTimeOffset"/>
+                <Property Name="requiredDecimal" Type="Edm.Decimal" Scale="2" Precision="10"/>
+                <Property Name="requiredDouble" Type="Edm.Double"/>
+                <Property Name="requiredGuid" Type="Edm.Guid"/>
+                <Property Name="requiredInteger" Type="Edm.Decimal" Scale="variable"/>
+                <Property Name="requiredInt16" Type="Edm.Int32"/>
+                <Property Name="requiredInt32" Type="Edm.Int32"/>
+                <Property Name="requiredInt64" Type="Edm.Int64"/>
+                <Property Name="requiredSByte" Type="Edm.Int32"/>
+                <Property Name="requiredSingle" Type="Edm.Decimal" Scale="variable"/>
+                <Property Name="requiredString" Type="Edm.String" MaxLength="255"/>
+                <Property Name="requiredTimeOfDay" Type="Edm.TimeOfDay"/>
+            </EntityType>
+            <EntityType Name="Orders">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+                <NavigationProperty Name="book" Type="BookShopService.Books">
+                    <ReferentialConstraint Property="book_ID" ReferencedProperty="ID"/>
+                </NavigationProperty>
+                <Property Name="book_ID" Type="Edm.Int32"/>
+                <NavigationProperty Name="country" Type="BookShopService.Countries">
+                    <ReferentialConstraint Property="country_code" ReferencedProperty="code"/>
+                </NavigationProperty>
+                <Property Name="country_code" Type="Edm.String" MaxLength="3"/>
+                <Property Name="amount" Type="Edm.Int32"/>
+            </EntityType>
+            <EntityType Name="Books_texts">
+                <Key>
+                    <PropertyRef Name="locale"/>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="locale" Type="Edm.String" MaxLength="14" Nullable="false"/>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="title" Type="Edm.String"/>
+            </EntityType>
+            <EntityType Name="Countries_texts">
+                <Key>
+                    <PropertyRef Name="locale"/>
+                    <PropertyRef Name="code"/>
+                </Key>
+                <Property Name="locale" Type="Edm.String" MaxLength="14" Nullable="false"/>
+                <Property Name="name" Type="Edm.String" MaxLength="255"/>
+                <Property Name="descr" Type="Edm.String" MaxLength="1000"/>
+                <Property Name="code" Type="Edm.String" MaxLength="3" Nullable="false"/>
+            </EntityType>
+            <ComplexType Name="my_bookshop_EchoAddress4">
+                <Property Name="street" Type="Edm.String"/>
+                <Property Name="city" Type="Edm.String"/>
+                <Property Name="state" Type="Edm.String"/>
+            </ComplexType>
+            <Function Name="get_complex" IsBound="false" IsComposable="false">
+                <ReturnType Type="BookShopService.my_bookshop_EchoAddress4"/>
+            </Function>
+            <Function Name="get_complex_collection" IsBound="false" IsComposable="false">
+                <ReturnType Type="Collection(BookShopService.my_bookshop_EchoAddress4)" Nullable="false"/>
+            </Function>
+            <Function Name="get_many_complex" IsBound="false" IsComposable="false">
+                <Parameter Name="value" Type="Collection(BookShopService.my_bookshop_EchoAddress4)" Nullable="false"/>
+                <ReturnType Type="Collection(BookShopService.my_bookshop_EchoAddress4)" Nullable="false"/>
+            </Function>
+            <Function Name="get_one_complex" IsBound="false" IsComposable="false">
+                <Parameter Name="value" Type="BookShopService.my_bookshop_EchoAddress4"/>
+                <ReturnType Type="BookShopService.my_bookshop_EchoAddress4"/>
+            </Function>
+            <Function Name="get_string" IsBound="false" IsComposable="false">
+                <Parameter Name="value" Type="Edm.String"/>
+                <ReturnType Type="Edm.String"/>
+            </Function>
+            <Function Name="get_string_collection" IsBound="false" IsComposable="false">
+                <ReturnType Type="Collection(Edm.String)" Nullable="false"/>
+            </Function>
+            <Function Name="get_string_collection_2" IsBound="false" IsComposable="false">
+                <Parameter Name="value" Type="Collection(Edm.String)" Nullable="false"/>
+                <ReturnType Type="Collection(Edm.String)" Nullable="false"/>
+            </Function>
+            <Action Name="post_complex" IsBound="false">
+                <Parameter Name="value" Type="BookShopService.my_bookshop_EchoAddress4"/>
+                <ReturnType Type="BookShopService.my_bookshop_EchoAddress4"/>
+            </Action>
+            <Action Name="post_complex_collection" IsBound="false">
+                <Parameter Name="value" Type="Collection(BookShopService.my_bookshop_EchoAddress4)" Nullable="false"/>
+                <ReturnType Type="Collection(BookShopService.my_bookshop_EchoAddress4)" Nullable="false"/>
+            </Action>
+            <Action Name="post_string" IsBound="false">
+                <Parameter Name="value" Type="Edm.String"/>
+                <ReturnType Type="Edm.String"/>
+            </Action>
+            <Action Name="post_string_collection" IsBound="false">
+                <Parameter Name="value" Type="Collection(Edm.String)" Nullable="false"/>
+                <ReturnType Type="Collection(Edm.String)" Nullable="false"/>
+            </Action>
+            <Annotations Target="BookShopService.BookImages/image">
+                <Annotation Term="Core.MediaType" Path="imageType"/>
+            </Annotations>
+            <Annotations Target="BookShopService.BookImages/imageType">
+                <Annotation Term="Core.IsMediaType" Bool="true"/>
+            </Annotations>
+            <Annotations Target="BookShopService.Countries">
+                <Annotation Term="UI.Identification">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="name"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="BookShopService.Countries/name">
+                <Annotation Term="Common.Label" String="{i18n>
+                    Name}"/>
+                </Annotations>
+                <Annotations Target="BookShopService.Countries/descr">
+                    <Annotation Term="Common.Label" String="{i18n>
+                        Description}"/>
+                    </Annotations>
+                    <Annotations Target="BookShopService.Countries/code">
+                        <Annotation Term="Common.Label" String="{i18n>
+                            CountryCode}"/>
+                            <Annotation Term="Common.Text" Path="name"/>
+                        </Annotations>
+                        <Annotations Target="BookShopService.Orders/createdAt">
+                            <Annotation Term="Common.Label" String="{i18n>
+                                CreatedAt}"/>
+                                <Annotation Term="Core.Computed" Bool="true"/>
+                                <Annotation Term="Core.Immutable" Bool="true"/>
+                                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                            </Annotations>
+                            <Annotations Target="BookShopService.Orders/createdBy">
+                                <Annotation Term="Common.Label" String="{i18n>
+                                    CreatedBy}"/>
+                                    <Annotation Term="Core.Computed" Bool="true"/>
+                                    <Annotation Term="Core.Description" String="{i18n>
+                                        UserID.Description}"/>
+                                        <Annotation Term="Core.Immutable" Bool="true"/>
+                                        <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                    </Annotations>
+                                    <Annotations Target="BookShopService.Orders/modifiedAt">
+                                        <Annotation Term="Common.Label" String="{i18n>
+                                            ChangedAt}"/>
+                                            <Annotation Term="Core.Computed" Bool="true"/>
+                                            <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                        </Annotations>
+                                        <Annotations Target="BookShopService.Orders/modifiedBy">
+                                            <Annotation Term="Common.Label" String="{i18n>
+                                                ChangedBy}"/>
+                                                <Annotation Term="Core.Computed" Bool="true"/>
+                                                <Annotation Term="Core.Description" String="{i18n>
+                                                    UserID.Description}"/>
+                                                    <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                </Annotations>
+                                                <Annotations Target="BookShopService.Orders/country">
+                                                    <Annotation Term="Common.Label" String="{i18n>
+                                                        Country}"/>
+                                                        <Annotation Term="Core.Description" String="{i18n>
+                                                            CountryCode.Description}"/>
+                                                        </Annotations>
+                                                        <Annotations Target="BookShopService.Orders/country_code">
+                                                            <Annotation Term="Common.Label" String="{i18n>
+                                                                Country}"/>
+                                                                <Annotation Term="Common.ValueList">
+                                                                    <Record Type="Common.ValueListType">
+                                                                        <PropertyValue Property="Label" String="{i18n>
+                                                                            Country}"/>
+                                                                            <PropertyValue Property="CollectionPath" String="Countries"/>
+                                                                            <PropertyValue Property="Parameters">
+                                                                                <Collection>
+                                                                                    <Record Type="Common.ValueListParameterInOut">
+                                                                                        <PropertyValue Property="LocalDataProperty" PropertyPath="country_code"/>
+                                                                                        <PropertyValue Property="ValueListProperty" String="code"/>
+                                                                                    </Record>
+                                                                                    <Record Type="Common.ValueListParameterDisplayOnly">
+                                                                                        <PropertyValue Property="ValueListProperty" String="name"/>
+                                                                                    </Record>
+                                                                                </Collection>
+                                                                            </PropertyValue>
+                                                                        </Record>
+                                                                    </Annotation>
+                                                                    <Annotation Term="Core.Description" String="{i18n>
+                                                                        CountryCode.Description}"/>
+                                                                    </Annotations>
+                                                                    <Annotations Target="BookShopService.Countries_texts/name">
+                                                                        <Annotation Term="Common.Label" String="{i18n>
+                                                                            Name}"/>
+                                                                        </Annotations>
+                                                                        <Annotations Target="BookShopService.Countries_texts/descr">
+                                                                            <Annotation Term="Common.Label" String="{i18n>
+                                                                                Description}"/>
+                                                                            </Annotations>
+                                                                            <Annotations Target="BookShopService.Countries_texts/code">
+                                                                                <Annotation Term="Common.Label" String="{i18n>
+                                                                                    CountryCode}"/>
+                                                                                    <Annotation Term="Common.Text" Path="name"/>
+                                                                                </Annotations>
+                                                                            </Schema>
+                                                                        </edmx:DataServices>
+                                                                    </edmx:Edmx>

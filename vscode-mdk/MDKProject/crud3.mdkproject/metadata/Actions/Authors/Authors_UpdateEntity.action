@@ -1,0 +1,21 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "Authors",
+        "Service": "/bookshop-mdk/Services/service1.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "ID": "#Control:ID/#Value",
+        "name": "#Control:name/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "ValidationRule": "/bookshop-mdk/Rules/Authors/Authors_ValidateEntity.js",
+    "OnValueChange": "/bookshop-mdk/Rules/Utils/ClearValidation.js",
+    "ShowActivityIndicator" : true,
+    "OnSuccess": "/bookshop-mdk/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/bookshop-mdk/Actions/UpdateEntityFailureMessage.action"
+}

@@ -1,0 +1,13 @@
+{
+  "PopoverItems": [{
+    "Title": "Upload Image",
+    "OnPress": "/bookshop-mdk/Actions/BookImages/NavToBookImages_UploadStream.action"
+  }, {
+    "Title": "Download Image",
+		"OnPress": "/bookshop-mdk/Actions/BookImages/BookImages_DownloadStream.action"
+  }, {
+    "Title": "Delete",
+    "OnPress": "/bookshop-mdk/Rules/BookImages/BookImages_DeleteConfirmation.js"
+  }],
+  "_Type": "Action.Type.PopoverMenu"
+}

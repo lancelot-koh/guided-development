@@ -1,0 +1,110 @@
+{
+	"Caption": "Bookshop",
+	"ActionBar": {
+		"Items": [{
+			"OnPress": "/bookshop-mdk/Actions/Service/Upload.action",
+			"Position": "right",
+			"Text": "Sync"
+		}]
+	},
+	"Controls": [{
+		"_Name": "SectionedTable",
+		"_Type": "Control.Type.SectionedTable",
+		"Sections": [{
+			"DataObject": {
+				"Name": "/bookshop-mdk/DataObjects/Authors/Authors_List.dataobject",
+				"Properties": {
+					"Header": {
+						"Caption": "Authors"
+					},
+					"MaxItemCount": 3,
+					"Search": {
+						"Enabled": false
+					},
+					"Footer": {
+						"Caption": "See All",
+						"AccessoryType": "disclosureIndicator",
+						"FooterStyle": "attribute",
+						"AttributeLabel": "/bookshop-mdk/Rules/Authors/Authors_Count.js",
+						"OnPress": "/bookshop-mdk/Actions/Authors/NavToAuthors_List.action"
+					}
+				}
+			},
+			"_Name": "Authors_List",
+			"_Type": "Section.Type.DataObject"
+		}, {
+			"DataObject": {
+				"Name": "/bookshop-mdk/DataObjects/Orders/Orders_List.dataobject",
+				"Properties": {
+					"Header": {
+						"Caption": "Orders"
+					},
+					"MaxItemCount": 3,
+					"Search": {
+						"Enabled": false
+					},
+					"Footer": {
+						"Caption": "See All",
+						"AccessoryType": "disclosureIndicator",
+						"FooterStyle": "attribute",
+						"AttributeLabel": "/bookshop-mdk/Rules/Orders/Orders_Count.js",
+						"OnPress": "/bookshop-mdk/Actions/Orders/NavToOrders_List.action"
+					}
+				}
+			},
+			"_Name": "Orders_List",
+			"_Type": "Section.Type.DataObject"
+		}, {
+			"SimplePropertyCells": [
+				{
+					"SimplePropertyCell": {
+						"AccessoryType": "disclosureIndicator",
+						"KeyName": "BookImages",
+						"OnPress": "/bookshop-mdk/Actions/BookImages/NavToBookImages_List.action",
+						"Value": "/bookshop-mdk/Rules/BookImages/BookImages_Count.js"
+					}
+				},
+				{
+					"SimplePropertyCell": {
+						"AccessoryType": "disclosureIndicator",
+						"KeyName": "Books",
+						"OnPress": "/bookshop-mdk/Actions/Books/NavToBooks_List.action",
+						"Value": "/bookshop-mdk/Rules/Books/Books_Count.js"
+					}
+				},
+				{
+					"SimplePropertyCell": {
+						"AccessoryType": "disclosureIndicator",
+						"KeyName": "Entities",
+						"OnPress": "/bookshop-mdk/Actions/Entities/NavToEntities_List.action",
+						"Value": "/bookshop-mdk/Rules/Entities/Entities_Count.js"
+					}
+				},
+				{
+					"SimplePropertyCell": {
+						"AccessoryType": "disclosureIndicator",
+						"KeyName": "Reviews",
+						"OnPress": "/bookshop-mdk/Actions/Reviews/NavToReviews_List.action",
+						"Value": "/bookshop-mdk/Rules/Reviews/Reviews_Count.js"
+					}
+				}
+			],
+			"Layout": {
+				"NumberOfColumns": 2
+			},
+      "DataSubscriptions": ["BookImages", "Books", "Entities", "Reviews"],
+			"_Name": "Overview_List",
+			"_Type": "Section.Type.SimplePropertyCollection"
+		}]
+	}],
+	"_Name": "Overview",
+	"_Type": "Page",
+	"ToolBar": {
+		"Controls": [{
+			"_Name": "LogoutToolbarItem",
+			"_Type": "Control.Type.ToolbarItem",
+			"Caption": "Logout",
+			"OnPress": "/bookshop-mdk/Actions/Logout.action"
+		}]
+	}
+}

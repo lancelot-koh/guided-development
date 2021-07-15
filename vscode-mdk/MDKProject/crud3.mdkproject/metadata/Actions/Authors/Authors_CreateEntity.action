@@ -1,0 +1,20 @@
+{
+    "CreateLinks": [],
+    "OnFailure": "/bookshop-mdk/Actions/CreateEntityFailureMessage.action",
+    "OnSuccess": "/bookshop-mdk/Actions/CreateEntitySuccessMessage.action",
+    "Properties": {
+        "ID": "#Control:ID/#Value",
+        "name": "#Control:name/#Value"
+    },
+    "Target": {
+        "EntitySet": "Authors",
+        "Service": "/bookshop-mdk/Services/service1.service"
+    },
+    "ActionResult": {
+        "_Name": "create"
+    },
+    "ValidationRule": "/bookshop-mdk/Rules/Authors/Authors_ValidateEntity.js",
+    "OnValueChange": "/bookshop-mdk/Rules/Utils/ClearValidation.js",
+    "ShowActivityIndicator" : true,
+    "_Type": "Action.Type.ODataService.CreateEntity"
+}

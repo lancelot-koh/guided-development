@@ -1,0 +1,79 @@
+{
+  "Caption": "Bookshop",
+	"ActionBar": {
+		"Items": [{
+			"OnPress": "/bookshop-mdk/Actions/Service/Upload.action",
+			"Position": "right",
+			"Text": "Sync"
+		}]
+	},
+  "Controls": [
+    {
+      "Sections":[
+        {
+          "ObjectHeader":{
+            "BodyText":"",
+            "Description":"",
+            "DetailImageIsCircular":true,
+            "Footnote":"",
+            "HeadlineText":"",
+            "StatusText":"",
+            "StatusImage":"",
+            "Subhead":"",
+            "SubstatusImage":"",
+            "SubstatusText":"",
+            "Tags":""
+          },
+          "_Type":"Section.Type.ObjectHeader"
+        }
+      ],
+      "_Name":"ObjectHeaderSection",
+      "_Type":"Control.Type.SectionedTable"
+    },
+    {
+      "Items": [
+        {
+          "_Name": "Authors",
+          "Caption": "Authors",
+          "PageToOpen" : "/bookshop-mdk/Pages/Authors/Authors_List.page",
+          "_Type": "Control.Type.TabItem"
+        },
+        {
+          "_Name": "BookImages",
+          "Caption": "BookImages",
+          "PageToOpen" : "/bookshop-mdk/Pages/BookImages/BookImages_List.page",
+          "_Type": "Control.Type.TabItem"
+        },
+        {
+          "_Name": "Books",
+          "Caption": "Books",
+          "PageToOpen" : "/bookshop-mdk/Pages/Books/Books_List.page",
+          "_Type": "Control.Type.TabItem"
+        },
+        {
+          "_Name": "Entities",
+          "Caption": "Entities",
+          "PageToOpen" : "/bookshop-mdk/Pages/Entities/Entities_List.page",
+          "_Type": "Control.Type.TabItem"
+        },
+        {
+          "_Name": "Orders",
+          "Caption": "Orders",
+          "PageToOpen" : "/bookshop-mdk/Pages/Orders/Orders_List.page",
+          "_Type": "Control.Type.TabItem"
+        },
+        {
+          "_Name": "Reviews",
+          "Caption": "Reviews",
+          "PageToOpen" : "/bookshop-mdk/Pages/Reviews/Reviews_List.page",
+          "_Type": "Control.Type.TabItem"
+        }
+      ],
+      "Position": "Top",
+      "_Type": "Control.Type.Tabs",
+      "_Name": "TabsControl"
+    }
+  ],
+  "_Name": "Tabs_TopTabs",
+  "_Type": "Page"
+}

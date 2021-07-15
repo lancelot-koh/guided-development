@@ -1,0 +1,69 @@
+{
+    "Caption": "Authors",
+
+    "ActionBar": {
+        "Items": [{
+            "OnPress": "/bookshop-mdk/Actions/Authors/NavToAuthors_Edit.action",
+            "Position": "right",
+            "SystemItem": "Edit"
+        }, {
+			"OnPress": "/bookshop-mdk/Actions/Authors/Authors_DetailPopover.action",
+			"Position": "right",
+			"Text": "More"
+		}]
+    },
+    "Controls": [{
+        "Sections": [{
+            "ObjectHeader": {
+                "DetailImage": "",
+                "HeadlineText": "{name}",
+                "Subhead": "{ID}",
+                "Tags": [],
+                "BodyText": "",
+                "Footnote": "",
+                "Description": "",
+                "StatusText": "",
+                "StatusImage": "",
+                "SubstatusImage": "",
+                "SubstatusText": ""
+            },
+            "_Type": "Section.Type.ObjectHeader"
+        }, {
+            "KeyAndValues": [{
+                    "KeyName": "ID",
+                    "Value": "{ID}"
+                },
+                {
+                    "KeyName": "name",
+                    "Value": "{name}"
+                }
+            ],
+            "Layout": {
+                "NumberOfColumns": 2
+            },
+            "MaxItemCount": 1,
+            "_Name": "SectionKeyValue0",
+            "_Type": "Section.Type.KeyValue"
+        }, {
+			"Header": {
+				"Caption": "Books"
+			},
+			"ObjectCell": {
+				"AccessoryType": "disclosureIndicator",
+				"Title": "{ID}",
+				"Subhead": "{title}",
+                "OnPress": "/bookshop-mdk/Actions/Books/NavToBooks_Detail.action"
+            },
+            "Target": {
+                "EntitySet": "{#Property:@odata.readLink}/books",
+                "Service": "/bookshop-mdk/Services/service1.service"
+            },
+            "_Type": "Section.Type.ObjectTable"
+        }],
+        "DataSubscriptions": ["Books"],
+        "_Type": "Control.Type.SectionedTable",
+        "_Name": "SectionedTable"
+    }],
+    "_Type": "Page",
+    "_Name": "Authors_Detail"
+}

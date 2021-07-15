@@ -1,0 +1,20 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "BookImages",
+        "Service": "/bookshop-mdk/Services/service1.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "ID": "#Control:ID/#Value",
+        "name": "#Control:name/#Value",
+        "imageType": "#Control:imageType/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "ShowActivityIndicator" : true,
+    "OnSuccess": "/bookshop-mdk/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/bookshop-mdk/Actions/UpdateEntityFailureMessage.action"
+}

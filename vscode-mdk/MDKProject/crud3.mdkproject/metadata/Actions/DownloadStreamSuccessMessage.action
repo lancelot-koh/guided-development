@@ -1,0 +1,7 @@
+{
+	"Animated": true,
+	"Duration": 2,
+	"Message": "Stream downloaded",
+	"IsIconHidden": true,
+	"_Type": "Action.Type.ToastMessage"
+}

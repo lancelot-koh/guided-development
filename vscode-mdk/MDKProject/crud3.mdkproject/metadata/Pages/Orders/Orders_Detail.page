@@ -1,0 +1,77 @@
+{
+    "Caption": "Orders",
+
+    "ActionBar": {
+        "Items": [{
+            "OnPress": "/bookshop-mdk/Actions/Orders/NavToOrders_Edit.action",
+            "Position": "right",
+            "SystemItem": "Edit"
+        }, {
+            "OnPress": "/bookshop-mdk/Rules/Orders/Orders_DeleteConfirmation.js",
+            "Position": "right",
+            "SystemItem": "Trash"
+        }]
+    },
+    "Controls": [{
+        "Sections": [{
+            "ObjectHeader": {
+                "DetailImage": "",
+                "HeadlineText": "{createdAt}",
+                "Subhead": "{createdBy}",
+                "Tags": [],
+                "BodyText": "",
+                "Footnote": "{modifiedBy}",
+                "Description": "{modifiedAt}",
+                "StatusText": "{ID}",
+                "StatusImage": "",
+                "SubstatusImage": "",
+                "SubstatusText": "{book_ID}"
+            },
+            "_Type": "Section.Type.ObjectHeader"
+        }, {
+            "KeyAndValues": [{
+                    "KeyName": "$(L,'CreatedAt')",
+                    "Value": "{createdAt}"
+                },
+                {
+                    "KeyName": "$(L,'CreatedBy')",
+                    "Value": "{createdBy}"
+                },
+                {
+                    "KeyName": "$(L,'ChangedAt')",
+                    "Value": "{modifiedAt}"
+                },
+                {
+                    "KeyName": "$(L,'ChangedBy')",
+                    "Value": "{modifiedBy}"
+                },
+                {
+                    "KeyName": "ID",
+                    "Value": "{ID}"
+                },
+                {
+                    "KeyName": "book_ID",
+                    "Value": "{book_ID}"
+                },
+                {
+                    "KeyName": "$(L,'Country')",
+                    "Value": "{country_code}"
+                },
+                {
+                    "KeyName": "amount",
+                    "Value": "{amount}"
+                }
+            ],
+            "Layout": {
+                "NumberOfColumns": 2
+            },
+            "MaxItemCount": 1,
+            "_Name": "SectionKeyValue0",
+            "_Type": "Section.Type.KeyValue"
+        }],
+        "_Type": "Control.Type.SectionedTable",
+        "_Name": "SectionedTable"
+    }],
+    "_Type": "Page",
+    "_Name": "Orders_Detail"
+}

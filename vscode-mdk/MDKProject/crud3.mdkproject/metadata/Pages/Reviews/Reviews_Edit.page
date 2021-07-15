@@ -1,0 +1,82 @@
+{
+    "Caption": "Update Reviews",
+    "ActionBar": {
+        "Items": [{
+            "Position": "left",
+            "SystemItem": "Cancel",
+            "OnPress": "/bookshop-mdk/Actions/CloseModalPage_Cancel.action"
+        }, {
+            "Position": "right",
+            "SystemItem": "Save",
+            "OnPress": "/bookshop-mdk/Actions/Reviews/Reviews_UpdateEntity.action"
+        }]
+    },
+    "Controls": [{
+        "Sections": [{
+            "Caption": "",
+            "Controls": [{
+                    "Caption": "ID",
+                    "_Name": "ID",
+                    "Value": "{ID}",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Mode": "DateTime",
+                    "_Name": "createdAt",
+                    "Value": "{createdAt}",
+                    "Caption": "$(L,'CreatedAt')",
+                    "_Type": "Control.Type.FormCell.DatePicker"
+                },
+                {
+                    "Caption": "$(L,'CreatedBy')",
+                    "_Name": "createdBy",
+                    "Value": "{createdBy}",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Mode": "DateTime",
+                    "_Name": "modifiedAt",
+                    "Value": "{modifiedAt}",
+                    "Caption": "$(L,'ChangedAt')",
+                    "_Type": "Control.Type.FormCell.DatePicker"
+                },
+                {
+                    "Caption": "$(L,'ChangedBy')",
+                    "_Name": "modifiedBy",
+                    "Value": "{modifiedBy}",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "book_ID",
+                    "_Name": "book_ID",
+                    "Value": "{book_ID}",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "rating",
+                    "_Name": "rating",
+                    "Value": "{rating}",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "title",
+                    "_Name": "title",
+                    "Value": "{title}",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "text",
+                    "_Name": "text",
+                    "Value": "{text}",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                }
+            ],
+            "_Name": "SectionFormCell1",
+            "_Type": "Section.Type.FormCell"
+		}],
+        "_Name": "SectionedTable",
+        "_Type": "Control.Type.SectionedTable"
+	}],
+    "_Type": "Page",
+    "_Name": "Reviews_Edit"
+}

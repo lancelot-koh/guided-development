@@ -1,0 +1,40 @@
+{
+    "ActionBar": {
+        "Items": [{
+            "OnPress": "/bookshop-mdk/Actions/CloseModalPage_Cancel.action",
+            "Position": "left",
+            "SystemItem": "Cancel"
+        }, {
+            "OnPress": "/bookshop-mdk/Actions/BookImages/BookImages_CreateEntity.action",
+            "Position": "right",
+            "SystemItem": "Save"
+        }]
+    },
+    "Caption": "Create BookImages",
+    "Controls": [{
+        "Sections": [{
+            "Controls": [{
+                    "Caption": "ID",
+                    "_Name": "ID",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "name",
+                    "_Name": "name",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "imageType",
+                    "_Name": "imageType",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                }
+			],
+            "_Name": "SectionFormCell1",
+            "_Type": "Section.Type.FormCell"
+		}],
+        "_Name": "SectionedTable",
+        "_Type": "Control.Type.SectionedTable"
+	}],
+    "_Type": "Page",
+    "_Name": "BookImages_Create"
+}

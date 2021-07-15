@@ -1,0 +1,61 @@
+{
+    "Caption": "Books",
+
+    "ActionBar": {
+        "Items": [{
+            "OnPress": "/bookshop-mdk/Actions/Books/NavToBooks_Edit.action",
+            "Position": "right",
+            "SystemItem": "Edit"
+        }, {
+            "OnPress": "/bookshop-mdk/Rules/Books/Books_DeleteConfirmation.js",
+            "Position": "right",
+            "SystemItem": "Trash"
+        }]
+    },
+    "Controls": [{
+        "Sections": [{
+            "ObjectHeader": {
+                "DetailImage": "",
+                "HeadlineText": "{title}",
+                "Subhead": "{ID}",
+                "Tags": [],
+                "BodyText": "",
+                "Footnote": "{stock}",
+                "Description": "{author_ID}",
+                "StatusText": "",
+                "StatusImage": "",
+                "SubstatusImage": "",
+                "SubstatusText": ""
+            },
+            "_Type": "Section.Type.ObjectHeader"
+        }, {
+            "KeyAndValues": [{
+                    "KeyName": "ID",
+                    "Value": "{ID}"
+                },
+                {
+                    "KeyName": "title",
+                    "Value": "{title}"
+                },
+                {
+                    "KeyName": "author_ID",
+                    "Value": "{author_ID}"
+                },
+                {
+                    "KeyName": "stock",
+                    "Value": "{stock}"
+                }
+            ],
+            "Layout": {
+                "NumberOfColumns": 2
+            },
+            "MaxItemCount": 1,
+            "_Name": "SectionKeyValue0",
+            "_Type": "Section.Type.KeyValue"
+        }],
+        "_Type": "Control.Type.SectionedTable",
+        "_Name": "SectionedTable"
+    }],
+    "_Type": "Page",
+    "_Name": "Books_Detail"
+}

@@ -1,0 +1,10 @@
+{
+    "Service": "/bookshop-mdk/Services/service1.service",
+    "_Type": "Action.Type.ODataService.Initialize",
+    "ShowActivityIndicator": true,
+    "OnSuccess": "/bookshop-mdk/Rules/Service/ServiceInitialized.js",
+    "OnFailure": "/bookshop-mdk/Actions/Service/InitializeFailureMessage.action",
+    "ActionResult": {
+        "_Name": "init"
+    }
+}

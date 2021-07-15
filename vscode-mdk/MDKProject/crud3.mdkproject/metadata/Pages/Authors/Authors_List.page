@@ -1,0 +1,50 @@
+{
+    "Caption": "Authors",
+    "ActionBar": {
+        "Items": [
+            {
+                "OnPress": "/bookshop-mdk/Actions/Authors/NavToAuthors_Create.action",
+                "Position": "right",
+                "SystemItem": "Add"
+            }
+        ]
+    },
+    "Controls": [
+        {
+            "Sections": [
+                {
+                    "DataObject": "/DataObjects/Authors/Authors_List.dataobject",
+                    "_Name": "Authors_List",
+                    "_Type": "Section.Type.DataObject"
+                },
+                {
+                    "DataObject": "/Pages/Authors/Authors_List.page",
+                    "_Name": "Authors_List",
+                    "_Type": "Section.Type.DataObject"
+                },
+                {
+                    "_Name": "OrderListDO",
+                    "_Type": "Section.Type.DataObject"
+                },
+                {
+                    "DataObject": "/DataObjects/Books/Books_List.dataobject",
+                    "_Name": "ReviewDO",
+                    "_Type": "Section.Type.DataObject"
+                },
+                {
+                    "DataObject": "/DataObjects/Orders/Orders_List.dataobject",
+                    "_Name": "Test555",
+                    "_Type": "Section.Type.DataObject"
+                }
+            ],
+            "LoadingIndicator": {
+                "Enabled": true,
+                "Text": "Loading, please wait..."
+            },
+            "_Type": "Control.Type.SectionedTable",
+            "_Name": "SectionedTable"
+        }
+    ],
+    "_Type": "Page",
+    "_Name": "Authors_List"
+}

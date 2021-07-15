@@ -1,0 +1,41 @@
+{
+	"ActionBar": {
+		"Items": [{
+			"OnPress": "/bookshop-mdk/Actions/CloseModalPage_Cancel.action",
+			"Position": "left",
+			"SystemItem": "Cancel"
+		}, {
+			"OnPress": "/bookshop-mdk/Actions/Authors/Authors_CreateBookEntity.action",
+			"Position": "right",
+			"SystemItem": "Save"
+		}]
+	},
+	"Caption": "Create Book",
+	"Controls": [{
+		"Sections": [{
+			"Controls": [
+				{
+					"Caption": "ID",
+					"_Name": "ID",
+					"_Type": "Control.Type.FormCell.SimpleProperty"
+				},
+				{
+					"Caption": "Title",
+					"_Name": "title",
+					"_Type": "Control.Type.FormCell.SimpleProperty"
+				},
+				{
+					"Caption": "Stock",
+					"_Name": "stock",
+					"_Type": "Control.Type.FormCell.SimpleProperty"
+				}
+			],
+    	"_Name": "SectionFormCell1",
+      "_Type": "Section.Type.FormCell"
+		}],
+    "_Name": "SectionedTable",
+    "_Type": "Control.Type.SectionedTable"
+	}],
+	"_Type": "Page",
+	"_Name": "Authors_CreateBook"
+}

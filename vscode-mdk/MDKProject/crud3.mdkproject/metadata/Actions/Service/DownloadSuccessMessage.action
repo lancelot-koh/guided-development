@@ -1,0 +1,8 @@
+{
+	"Animated": true,
+	"Duration": 2,
+	"Message": "Application data sync completed",
+	"IsIconHidden": true,
+	"NumberOfLines": 2,
+	"_Type": "Action.Type.ToastMessage"
+}

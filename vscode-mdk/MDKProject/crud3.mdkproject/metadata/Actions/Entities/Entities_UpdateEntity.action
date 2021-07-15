@@ -1,0 +1,37 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "Entities",
+        "Service": "/bookshop-mdk/Services/service1.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "id": "#Control:id/#Value",
+        "requiredEnum": "#Control:requiredEnum/#Value",
+        "requiredComplex_street": "#Control:requiredComplex_street/#Value",
+        "requiredComplex_city": "#Control:requiredComplex_city/#Value",
+        "requiredComplex_state": "#Control:requiredComplex_state/#Value",
+        "requiredBoolean": "#Control:requiredBoolean/#Value",
+        "requiredByte": "#Control:requiredByte/#Value",
+        "requiredDate": "#Control:requiredDate/#Value",
+        "requiredDateTimeOffset": "#Control:requiredDateTimeOffset/#Value",
+        "requiredDecimal": "#Control:requiredDecimal/#Value",
+        "requiredDouble": "#Control:requiredDouble/#Value",
+        "requiredGuid": "#Control:requiredGuid/#Value",
+        "requiredInteger": "#Control:requiredInteger/#Value",
+        "requiredInt16": "#Control:requiredInt16/#Value",
+        "requiredInt32": "#Control:requiredInt32/#Value",
+        "requiredInt64": "#Control:requiredInt64/#Value",
+        "requiredSByte": "#Control:requiredSByte/#Value",
+        "requiredSingle": "#Control:requiredSingle/#Value",
+        "requiredString": "#Control:requiredString/#Value",
+        "requiredTimeOfDay": "#Control:requiredTimeOfDay/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "ShowActivityIndicator" : true,
+    "OnSuccess": "/bookshop-mdk/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/bookshop-mdk/Actions/UpdateEntityFailureMessage.action"
+}

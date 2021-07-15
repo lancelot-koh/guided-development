@@ -1,0 +1,76 @@
+{
+    "Caption": "Update Orders",
+    "ActionBar": {
+        "Items": [{
+            "Position": "left",
+            "SystemItem": "Cancel",
+            "OnPress": "/bookshop-mdk/Actions/CloseModalPage_Cancel.action"
+        }, {
+            "Position": "right",
+            "SystemItem": "Save",
+            "OnPress": "/bookshop-mdk/Actions/Orders/Orders_UpdateEntity.action"
+        }]
+    },
+    "Controls": [{
+        "Sections": [{
+            "Caption": "",
+            "Controls": [{
+                    "Mode": "DateTime",
+                    "_Name": "createdAt",
+                    "Value": "{createdAt}",
+                    "Caption": "$(L,'CreatedAt')",
+                    "_Type": "Control.Type.FormCell.DatePicker"
+                },
+                {
+                    "Caption": "$(L,'CreatedBy')",
+                    "_Name": "createdBy",
+                    "Value": "{createdBy}",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Mode": "DateTime",
+                    "_Name": "modifiedAt",
+                    "Value": "{modifiedAt}",
+                    "Caption": "$(L,'ChangedAt')",
+                    "_Type": "Control.Type.FormCell.DatePicker"
+                },
+                {
+                    "Caption": "$(L,'ChangedBy')",
+                    "_Name": "modifiedBy",
+                    "Value": "{modifiedBy}",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "ID",
+                    "_Name": "ID",
+                    "Value": "{ID}",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "book_ID",
+                    "_Name": "book_ID",
+                    "Value": "{book_ID}",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "$(L,'Country')",
+                    "_Name": "country_code",
+                    "Value": "{country_code}",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "amount",
+                    "_Name": "amount",
+                    "Value": "{amount}",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                }
+            ],
+    	    "_Name": "SectionFormCell1",
+            "_Type": "Section.Type.FormCell"
+		}],
+        "_Name": "SectionedTable",
+        "_Type": "Control.Type.SectionedTable"
+	}],
+    "_Type": "Page",
+    "_Name": "Orders_Edit"
+}

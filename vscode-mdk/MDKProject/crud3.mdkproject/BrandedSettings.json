@@ -1,0 +1,16 @@
+{
+  "ApplicationDisplayName": "MDK CRUD",
+  "ConnectionSettings": {
+    "AppId": "sg.perf.test",
+    "ClientId": "ee2ed6c0-3b05-46f4-987c-b84b7376bc70",
+    "SapCloudPlatformEndpoint": "https://mdkapps-sandbox-sg-perf-test.cfapps.sap.hana.ondemand.com",
+    "AuthorizationEndpointUrl": "https://mdkapps-sandbox-sg-perf-test.cfapps.sap.hana.ondemand.com/oauth2/api/v1/authorize",
+    "RedirectUrl": "https://mdkapps-sandbox-sg-perf-test.cfapps.sap.hana.ondemand.com",
+    "TokenUrl": "https://mdkapps-sandbox-sg-perf-test.cfapps.sap.hana.ondemand.com/oauth2/api/v1/token"
+  },
+  "LogSettings": {
+    "FileName": "ClientLog.txt",
+    "MaxFileSizeInMegaBytes": 5,
+    "LogLevel": "Error"
+  }
+}

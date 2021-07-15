@@ -1,0 +1,25 @@
+{
+  "ParentLink": {
+		"Property": "books",
+		"Target": {
+			"EntitySet": "Authors",
+			"ReadLink": "{@odata.readLink}"
+		}
+	},
+	"OnFailure": "/bookshop-mdk/Actions/CreateEntityFailureMessage.action",
+	"OnSuccess": "/bookshop-mdk/Actions/CreateEntitySuccessMessage.action",
+	"Properties": {
+		"ID": "#Control:ID/#Value",
+		"title": "#Control:title/#Value",
+		"stock": "#Control:stock/#Value"
+	},
+	"Target": {
+		"EntitySet": "Books",
+		"Service": "/bookshop-mdk/Services/service1.service"
+	},
+	"ActionResult": {
+		"_Name": "create"
+	},
+  "ShowActivityIndicator" : true,
+	"_Type": "Action.Type.ODataService.CreateRelatedEntity"
+}

@@ -55,7 +55,7 @@
 			"commandPalette": [
 				{
 					"command": "loadGuidedDevelopment",
-					"when": "false"
+					"when": "true"
 				},
 				{
 					"command": "guidedDevelopment.toggleOutput",

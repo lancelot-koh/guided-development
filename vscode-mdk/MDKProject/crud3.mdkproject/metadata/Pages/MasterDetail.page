@@ -1,0 +1,25 @@
+{
+  "Caption": "Bookshop",
+	"ActionBar": {
+		"Items": [{
+			"OnPress": "/bookshop-mdk/Actions/Service/Upload.action",
+			"Position": "right",
+			"Text": "Sync"
+		}]
+	},
+  "Controls": [
+    {
+      "StartColumn": {
+        "_Name": "StartColumn",
+        "PageToOpen": "/bookshop-mdk/Pages/Main.page"
+      },
+      "EndColumn": {
+        "_Name": "EndColumn",
+        "PageToOpen": "/bookshop-mdk/Pages/Authors/Authors_List.page"
+      },
+      "_Type": "Control.Type.FlexibleColumnLayout"
+    }
+  ],
+  "_Type": "Page",
+  "_Name": "FlexibleColumn_MasterDetail"
+}

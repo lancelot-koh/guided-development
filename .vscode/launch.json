@@ -55,6 +55,21 @@
       "preLaunchTask": "watch backend (webpack)"
     },
     {
+      "name": "Guided-dev: MDK Example",
+      "type": "extensionHost",
+      "request": "launch",
+      "runtimeExecutable": "${execPath}",
+      "args": [
+        "--extensionDevelopmentPath=${workspaceFolder}/backend",
+        "--extensionDevelopmentPath=${workspaceFolder}/vscode-mdk",
+      ],
+      "outFiles": [
+        "${workspaceFolder}/backend/out/**/*.js",
+        "${workspaceFolder/vscode-mdk/out/**/*.js",
+      ],
+      "preLaunchTask": "watch backend (webpack)"
+    },
+    {
       "name": "Guided-dev: Code-Snippet example",
       "type": "extensionHost",
       "request": "launch",

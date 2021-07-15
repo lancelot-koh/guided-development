@@ -1,0 +1,24 @@
+{
+    "CreateLinks": [],
+    "OnFailure": "/bookshop-mdk/Actions/CreateEntityFailureMessage.action",
+    "OnSuccess": "/bookshop-mdk/Actions/CreateEntitySuccessMessage.action",
+    "Properties": {
+        "createdAt": "#Control:createdAt/#Value",
+        "createdBy": "#Control:createdBy/#Value",
+        "modifiedAt": "#Control:modifiedAt/#Value",
+        "modifiedBy": "#Control:modifiedBy/#Value",
+        "ID": "#Control:ID/#Value",
+        "book_ID": "#Control:book_ID/#Value",
+        "country_code": "#Control:country_code/#Value",
+        "amount": "#Control:amount/#Value"
+    },
+    "Target": {
+        "EntitySet": "Orders",
+        "Service": "/bookshop-mdk/Services/service1.service"
+    },
+    "ActionResult": {
+        "_Name": "create"
+    },
+    "ShowActivityIndicator" : true,
+    "_Type": "Action.Type.ODataService.CreateEntity"
+}
